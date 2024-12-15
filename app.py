@@ -12,7 +12,7 @@ df_cars = pd.read_excel("../Preprocessed_data.xlsx")
 
 # Define categorical columns and extract unique values
 categorical_columns = ['ft', 'bt', 'transmission', 'company', 'model', 
-                       'Insurance Validity', 'Color', 'Location', 
+                       'Insurance Validity', 'Color', 'City', 
                        'RTO_region', 'Drive_Type_Classified']
 unique_values = {col: df_cars[col].unique().tolist() for col in categorical_columns}
 
@@ -96,7 +96,7 @@ def main():
 
     insurance_validity = st.sidebar.selectbox('Insurance Validity', unique_values['Insurance Validity'], index=0)
     color = st.sidebar.selectbox('Color', unique_values['Color'], index=0)
-    location = st.sidebar.selectbox('Location', unique_values['Location'], index=0)
+    city = st.sidebar.selectbox('Location', unique_values['City'], index=0)
     rto_region = st.sidebar.selectbox('RTO Region', unique_values['RTO_region'], index=0)
     drive_type = st.sidebar.selectbox('Drive Type', unique_values['Drive_Type_Classified'], index=0)
 
@@ -122,7 +122,7 @@ def main():
         'Color': [color],
         'Displacement': [engine_cc],
         'Turbo Charger': [turbo_charger],
-        'Location': [location],
+        'City': [city],
         'RTO_region': [rto_region],
         'Drive_Type_Classified': [drive_type],
         'ownerNo': [owner_no]
