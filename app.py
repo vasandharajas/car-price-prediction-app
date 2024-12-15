@@ -4,11 +4,11 @@ import joblib
 import streamlit as st
 
 # Load the saved model and encoded columns
-model = joblib.load("../xgboost_ml_model.pkl")
-encoded_columns = joblib.load("../encoded_columns.pkl")
+model = joblib.load(r"C:\Users\anand\Desktop\CarDekho Prediction Project Files\xgboost_ml_model.pkl")
+encoded_columns = joblib.load(r"C:\Users\anand\Desktop\CarDekho Prediction Project Files\encoded_columns.pkl")
 
 # Load dataset from Excel to extract unique values for dropdown options
-df_cars = pd.read_excel("../Preprocessed_data.xlsx")
+df_cars = pd.read_excel(r"C:\Users\anand\Desktop\CarDekho Prediction Project Files\Preprocessed_data.xlsx")
 
 # Define categorical columns and extract unique values
 categorical_columns = ['ft', 'bt', 'transmission', 'company', 'model', 
