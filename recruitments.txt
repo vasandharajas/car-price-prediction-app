@@ -1,7 +1,7 @@
-streamlit
-openpyxl
-pandas
-joblib
-scikit-learn
-xgboost
+import openpyxl
+import pandas as pd
+import joblib
+import streamlit as st
+import xgboost
+import os
 
